@@ -1,1 +1,52 @@
 /* ini file css */
+
+.main-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid black;
+    padding: 8px;
+}
+
+.main-logo {
+    height: 50px;
+    width: 50px;
+    border: 1px solid;
+    background-image: url(https://img.pikbest.com/png-images/20240908/cool-and-modern-logo-design-free-vector_10814782.png!w700wp);
+    border-radius: 50%;
+}
+
+nav{
+    display: flex;
+}
+
+nav > a {
+    border: 1px solid;
+    padding: 8px;
+    text-decoration: none;
+    color: black;
+}
+
+.benner-img{
+    border: 2px solid black;
+    height: 500px;
+}
+
+.our-profile-content{
+    border: 2px solid black;
+    height: 500px;
+}
+
+.achievment-content{
+    border: 2px solid black;
+    height: 500px;
+}
+
+.message-us-content{
+    border: 2px solid black;
+    height: 500px;
+}
+
+footer{
+    text-align: center;
+}
