@@ -20,7 +20,8 @@
 
 nav{
     display: flex;
-    margin-right: 50px;
+    /* margin-right: 50px; */
+    text-align: center;
 }
 
 nav > a {
@@ -88,6 +89,8 @@ input[type="submit"]{
 .message-us-content{
     border: 2px solid black;
     height: 500px;
+    display: flex;
+    justify-content: space-around;
 }
 
 .tampilan{
@@ -100,3 +103,17 @@ footer{
     text-align: right;
     margin: 30px;
 }
+
+@media only screen and (max-width: 600px){
+    .main-header{
+        flex-direction: column ;
+    }
+    .menu{
+        width: 100%;
+        flex-direction: column;
+    }
+    .main-logo{
+        margin-bottom: 14px;
+    }
+}
+

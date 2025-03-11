@@ -36,3 +36,24 @@ function setValue(nama, birth_date, gender, msg) {
     document.getElementById("").innerHTML = ""
 }
 
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs() {
+    showDivs(slideIndex == n);
+}
+function showDivs(){
+    var i;
+    var x = document.getElementsByClassName('main-banner');
+    if(n > imgList.length) slideIndex = 1;
+    else if( n < 1) slideIndex = imgList.length;
+
+    for (i = 0; i < imgList; i++){
+        imgList[i].style.display = "" ;
+    }
+    
+    imgList[slideIndex - 1].style.display = "block"
+}
+setInterval(() => {
+    plusDivs(1);
+}, 1000)
