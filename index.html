@@ -8,6 +8,8 @@
 
     <!--css-->
     <link rel="stylesheet" href="css\style.css">
+    <!-- java script -->
+    <script src="js\script.js"></script>
 </head>
 
 <body>
@@ -28,32 +30,48 @@
         <!-- Home Content -->
         <section id="home">
             <header>
-                <h1>Home</h1>
+                <h1>Hai <span id="name">Sealti</span> Welcome to my web</h1>
                 <p>Selamat datang Cihuyyyy</p>
             </header>
-
             <!-- Banner autoslide -->
             <div class="banner-img"></div>
         </section>
         <hr />
+
         <!-- Our Profile Content -->
         <section id="our-profile">
             <header>
                 <h1>Our Profile</h1>
             </header>
-            
             <!-- Profile Content -->
-            <div class="our-profile-content"></div>
+            <div class="our-profile-content">
+                <div>
+                    <h3>About Me</h3>
+                </div>
+                <div>
+                    <div>
+                        <h3>Education</h3>
+                        <ul>
+                            <li>Test</li>
+                            <dl>Sd</dl>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3>My Skill</h3>
+                    </div>
+                </div>
+            </div>
         </section>
+
         <!-- Achievment Content -->
         <section id="achievement">
             <header>
                 <h1>Achievement</h1>
             </header>
-            
             <!-- Achievment Content -->
             <div class="achievement-content"></div>
         </section>
+
         <!-- Message Content -->
         <section id="message-us">
             <header>
@@ -62,39 +80,34 @@
             
             <!-- Message Us Content -->
             <div class="message-us-content">
-                <form action="">
+                <form name="msg-form" onsubmit="return validateForm()">
+                    <label for="name">Nama : <input type="text" class="input-name" placeholder="Nama"></label>
+                    <br />
 
-                    <!-- input nama -->
-                    <div>
-                        <label for="text">Nama <span class="home-span">:</span></label>
-                        <input type="text" name="name" id="nama" placeholder="Nama">
-                    </div>
+                    <label for="birth-date">Tanggal Lahir : <input type="date" class="birth-date"></label> 
+                    <br />
 
-                    <!-- input tgl lahir -->
-                    <div>
-                        <label for="date">Tanggal Lahir <span>:</span></label> 
-                        <input type="date" name="birth-date" id="tanggal-lahir" >
-                    </div>
+                    <label for="gender">Jenis Kelamin : 
+                        <input type="radio" name="gender" id="male" value="male"> 
+                        <label for="male">Laki-laki</label>
+                        <input type="radio" name="gender" id="female" value="female"> 
+                        <label for="female">Perempuan</label>
+                    </label> 
+                    <br />
 
-                    <!-- pilih jenis kelamin -->
-                    <div>
-                        <label for="boolean">Jenis Kelamin <span>:</span></label>
-                        <label><input type="radio" name="gender" id="laki-laki" value="" checked="true">Laki-Laki</label>
-                        <label><input type="radio" name="gender" id="perempuan">Perempuan</label>
-                    </div>
+                    <label for="msg">Pesan : <textarea name="msg-input" id="input-msg" placeholder="Pesan"></textarea></label>
+                    <br />
 
-                    <!-- input pesan -->
-                    <div>
-                        <label for="text">Pesan <span class="msg-span">:</span></label>
-                        <input type="text" name="message" id="pesan" placeholder="Pesan">
-                    </div>
-
-                    <!-- tombol submit -->
-                    <div>
-                        <button type="submit" class="submit-button">Submit</button>
-                    </div>
-
+                    <input type="submit" value="Submit" />
                 </form>
+
+                <div class="tampilan">
+                    <p>Curent Time : <span id="curent-time"></span></p>
+                    <p>Nama : <span id="full-name"></span></p>
+                    <p>Tanggal lahir : <span id="sender-birth-date"></span></p>
+                    <p>Jenis Kelamin : <span id="sender-gender"></span></p>
+                    <p>Pesan : <span id="sender-msg"></span></p>
+                </div>
             </div>
         </section>
     </main>
