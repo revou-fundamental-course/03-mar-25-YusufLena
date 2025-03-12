@@ -46,10 +46,10 @@ textarea {
     background-color: #f8f8f8;
     font-size: 16px;
     resize: none;
+    margin-top: 10px;
 }
 
-input[type="text"],
-input[type="date"] {
+input[type="text"] {
     height: 20px;
     width: 250px;
     padding: 2px 2px;
@@ -58,23 +58,38 @@ input[type="date"] {
     background-color: #f8f8f8;
     font-size: 14px;
     font-family: 'Times New Roman', Times, serif;
+    margin-left: 5px;
+}
+
+input[type="date"]{
+    height: 20px;
+    width: 200px;
+    padding: 2px 2px;
+    border: 1px solid black;
+    border-radius: 4px;
+    background-color: #f8f8f8;
+    font-size: 14px;
+    font-family: 'Times New Roman', Times, serif;
+    margin-left: 5px;
 }
 
 input[type="submit"]{
     height: 25px;
-    width: 250px;
+    width: 350px;
     padding: 2px 2px;
     background-color: rgb(235, 235, 235);
     border-radius: 4px;
     font-size: 16px;
     font-family: 'Times New Roman', Times, serif;
     text-align: center;
+    margin-top: 10px;
+    margin-bottom: 20px;
 }
 
-.banner-img{
+/* .banner-img{
     border: 2px solid black;
     height: 500px;
-}
+} */
 
 .our-profile-content{
     border: 2px solid black;
@@ -87,8 +102,8 @@ input[type="submit"]{
 }
 
 .message-us-content{
-    border: 2px solid black;
-    height: 500px;
+    /* border: 2px solid black;
+    height: 500px; */
     display: flex;
     justify-content: space-around;
 }
@@ -98,6 +113,13 @@ input[type="submit"]{
     width: 500px;
     height: 250px;
 }
+.msg-output{
+    margin-left: 10px;
+}
+.form-input{
+    display: flex;
+    align-items: center
+}
 
 footer{
     text-align: right;
@@ -105,8 +127,24 @@ footer{
 }
 
 @media only screen and (max-width: 600px){
+    main{
+        flex-direction: column;
+    }
+    form{
+        margin-bottom: 20px;
+    }
+    header > h1{
+        margin: 0px;
+        text-align: center;
+    }
+    .message-us-content{
+        flex-direction: column;
+    }
     .main-header{
         flex-direction: column ;
+    }
+    .tampilan{
+        width: 100%;
     }
     .menu{
         width: 100%;
@@ -114,6 +152,27 @@ footer{
     }
     .main-logo{
         margin-bottom: 14px;
+        margin-left: 0px;
     }
 }
+
+.banner-img{
+    height: 500px;
+    width: 100%;
+    margin: 5px;
+    background-position: center;
+    background-size: cover;
+}
+
+.banner-1 {
+    background-image: url(../assets/photo1.jpg);
+}
+.banner-2 {
+    background-image: url(../assets/download.jpg);
+}
+.banner-3 {
+    background-image: url(../assets/pict.jpg);
+}
+
+
 

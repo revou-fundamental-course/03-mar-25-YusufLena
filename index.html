@@ -30,11 +30,14 @@
         <!-- Home Content -->
         <section id="home">
             <header>
-                <h1>Hai <span id="name">Sealti</span> Welcome to my web</h1>
-                <p>Selamat datang Cihuyyyy</p>
+                <h1>Hai <span id="name">Sealti</span> Welcome to My Web</h1>
+                <p>Ini adalah project portofolio pertama </p>
             </header>
             <!-- Banner autoslide -->
-            <div class="banner-img"></div>
+            <div class="banner-img  banner-1"></div>
+            <div class="banner-img  banner-2"></div>
+            <div class="banner-img  banner-3"></div>
+            <!-- <button onclick="nextBanner()">Next</button> -->
         </section>
         <hr />
 
@@ -81,13 +84,13 @@
             <!-- Message Us Content -->
             <div class="message-us-content">
                 <form name="msg-form" onsubmit="return validateForm()">
-                    <label for="name">Nama : <input type="text" class="input-name" placeholder="Nama"></label>
+                    <label for="name" class="form-input">Nama : <input type="text" class="input-name" placeholder="Nama"></label>
                     <br />
 
-                    <label for="birth-date">Tanggal Lahir : <input type="date" class="birth-date"></label> 
+                    <label for="birth-date" class="form-input">Tanggal Lahir : <input type="date" class="birth-date"></label> 
                     <br />
 
-                    <label for="gender">Jenis Kelamin : 
+                    <label for="gender" class="form-input">Jenis Kelamin : 
                         <input type="radio" name="gender" id="male" value="male"> 
                         <label for="male">Laki-laki</label>
                         <input type="radio" name="gender" id="female" value="female"> 
@@ -102,11 +105,11 @@
                 </form>
 
                 <div class="tampilan">
-                    <p>Curent Time : <span id="curent-time"></span></p>
-                    <p>Nama : <span id="full-name"></span></p>
-                    <p>Tanggal lahir : <span id="sender-birth-date"></span></p>
-                    <p>Jenis Kelamin : <span id="sender-gender"></span></p>
-                    <p>Pesan : <span id="sender-msg"></span></p>
+                    <p class="msg-output">Curent Time : <span id="curent-time"></span></p>
+                    <p class="msg-output">Nama : <span id="full-name"></span></p>
+                    <p class="msg-output">Tanggal lahir : <span id="sender-birth-date"></span></p>
+                    <p class="msg-output">Jenis Kelamin : <span id="sender-gender"></span></p>
+                    <p class="msg-output">Pesan : <span id="sender-msg"></span></p>
                 </div>
             </div>
         </section>
