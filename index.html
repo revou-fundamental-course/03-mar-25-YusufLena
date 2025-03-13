@@ -20,9 +20,9 @@
         <!-- Navigation -->
         <nav class="menu">
             <a href="#home">Home</a>
-            <a href="#our-profile">Our Profile</a>
-            <a href="#achievement">Achievement</a>
-            <a href="#message-us">Message Us</a>
+            <a href="#my-profile">My Profile</a>
+            <a href="#skills">Education</a>
+            <a href="#contact-me">Contact Me</a>
         </nav>
     </header>
     <hr />
@@ -31,63 +31,96 @@
         <section id="home">
             <header>
                 <h1>Hai <span id="name">Sealti</span> Welcome to My Web</h1>
-                <p>Ini adalah project portofolio pertama </p>
+                <p class="welcome">Ini adalah project portofolio pertama </p>
             </header>
             <!-- Banner autoslide -->
             <div class="banner-img  banner-1"></div>
             <div class="banner-img  banner-2"></div>
             <div class="banner-img  banner-3"></div>
+            <div class="banner-img banner-4"></divcl>
             <!-- <button onclick="nextBanner()">Next</button> -->
         </section>
         <hr />
 
         <!-- Our Profile Content -->
-        <section id="our-profile">
+        <section id="my-profile">
             <header>
-                <h1>Our Profile</h1>
+                <h1>My Profile</h1>
             </header>
             <!-- Profile Content -->
-            <div class="our-profile-content">
-                <div>
-                    <h3>About Me</h3>
-                </div>
-                <div>
-                    <div>
-                        <h3>Education</h3>
-                        <ul>
-                            <li>Test</li>
-                            <dl>Sd</dl>
-                        </ul>
-                    </div>
-                    <div>
-                        <h3>My Skill</h3>
-                    </div>
-                </div>
+            <div class="my-profile-content">
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ad, voluptas. Itaque quod reiciendis velit enim iure modi expedita, 
+                    perferendis praesentium voluptatem officiis, ratione repellendus magnam quam odio nihil minima voluptatum?</p>
+                <img src="./assets/Gambar3.avif" alt="Gambar3" width="200px" height="150px">
             </div>
         </section>
 
-        <!-- Achievment Content -->
-        <section id="achievement">
-            <header>
-                <h1>Achievement</h1>
-            </header>
-            <!-- Achievment Content -->
-            <div class="achievement-content"></div>
-        </section>
+        <!-- Education & skils content -->
+        <section id="skills">
+            <div class="skills main-container">
+                <h1 class="section-title">Skills & Education</h1>
+                
+                <div class="skills-grid">
+                    <div class="skills-left">
+                        <div class="education">
+                            <div class="line">
+                                <div></div>
+                    </div>
+                    <div class="education-info">
+                        <h4 class="education-title">Universitas Gunadarma</h4>
+                        <p>Bachelor degree of informatics</p>
+                        <h4 class="education-years">2020 - 2024</h4>
+                    </div>
+                </div>
+                <div class="education">
+                    <div class="line">
+                        <div></div>
+                    </div>
+                    <div class="education-info">
+                        <h4 class="education-title">SMA Negeri</h4>
+                        <p>MIPA</p>
+                        <h4 class="education-years">2017 - 2020</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="skills-right">
+                <p>
+                    For 1+ years, I have been continuously learning in the field of
+                    front-end and back-end experimenting with new technologies and frameworks,
+                    and here you can see a summary of my skills. Field of front-end 
+                    and back-end experimenting with new technologies.
+                </p>
+                
+                <div class="skills-list">
+                    <ul>
+                        <li>Node JS</li>
+                        <li>MongoDB</li>
+                        <li>HTML</li>
+                    </ul>
 
-        <!-- Message Content -->
-        <section id="message-us">
+                    <ul>
+                        <li>CSS</li>
+                        <li>Javacript</li>
+                        <li>PHP</li>
+                        <li>Golang</li>
+                    </ul>
+                </div>
+            </div>
+        </section>   
+
+        <!-- Contact Me Content -->
+        <section id="contact-me">
             <header>
                 <h1>Message Us</h1>
             </header>
             
-            <!-- Message Us Content -->
-            <div class="message-us-content">
+            <!-- Contact Me Content -->
+            <div class="contact-me-content">
                 <form name="msg-form" onsubmit="return validateForm()">
-                    <label for="name" class="form-input">Nama : <input type="text" class="input-name" placeholder="Nama"></label>
+                    <label for="name" class="form-input">Nama : <input type="text" name="input-name" class="input-name" placeholder="Nama"></label>
                     <br />
 
-                    <label for="birth-date" class="form-input">Tanggal Lahir : <input type="date" class="birth-date"></label> 
+                    <label for="birth-date" class="form-input">Tanggal Lahir : <input type="date" name="birth-date" class="birth-date"></label> 
                     <br />
 
                     <label for="gender" class="form-input">Jenis Kelamin : 
@@ -98,7 +131,7 @@
                     </label> 
                     <br />
 
-                    <label for="msg">Pesan : <textarea name="msg-input" id="input-msg" placeholder="Pesan"></textarea></label>
+                    <label for="msg">Pesan : <textarea name="msg-input" id="msg-input" placeholder="Pesan"></textarea></label>
                     <br />
 
                     <input type="submit" value="Submit" />

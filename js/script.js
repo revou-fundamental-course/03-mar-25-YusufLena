@@ -13,27 +13,39 @@
 
 
 function validateForm() {
-    const nama = document.forms[''][''].value
-    const birth_date = document.forms[''][''].value
-    const gender = document.forms[''][''].value
-    const msg = document.forms[''][''].value
+    const nama = document.forms['msg-form']['input-name'].value
+    const birth_date = document.forms['msg-form']['birth-date'].value
+    const msg = document.forms['msg-form']['msg-input'].value
+    const date = new Date(document.lastModified);
 
-    if(nama == "", birth_date == "", gender == "", msg == "") {
-        document.getElementById().innerHTML = "";
+    const genderElements = document.forms['msg-form']['gender'];
+    let gender = "";
+    for (const element of genderElements) {
+        if (element.checked) {
+            gender = element.value;
+            break;
+        }
+    }
 
+    if(nama === "", birth_date === "", gender === "", msg === "") {
+        document.getElementById("msg-form").innerHTML = "";
+        alert("Semua kolom harus diisi!");
         return false
     }
 
-    setValue(nama, birth_date, gender, msg);
+    setValue(nama, birth_date, gender, msg, date);
 
     return false;
 }
 
-function setValue(nama, birth_date, gender, msg) {
-    document.getElementById("").innerHTML = ""
-    document.getElementById("").innerHTML = ""
-    document.getElementById("").innerHTML = ""
-    document.getElementById("").innerHTML = ""
+function setValue(nama, birth_date, gender, msg, date) {
+    document.getElementById("full-name").innerHTML = nama
+    document.getElementById("sender-birth-date").innerHTML = birth_date
+    document.getElementById("sender-gender").innerHTML = gender == male ? "Laki-laki" : "Perempuan"
+    document.getElementById("sender-msg").innerHTML = msg
+    document.getElementById("curent-time").innerHTML = date;
+    
+    console.log(setValue)
 }
 
 // var slideIndex = 1;
@@ -67,16 +79,16 @@ function  showBanner(){
     const banners = document.getElementsByClassName('banner-img')
     console.log(banners)
 
-    if (bannerIndex >= banners.length){
+    if (bannerIndex > banners.length){
         bannerIndex = 0;
-    }else if(bannerIndex < 0){
-        bannerIndex = banners.length - 1
     }
 
     for (let i = 0; i < banners.length; i++){
         banners[i].style.display = 'none';
         banners[bannerIndex].style.display = 'block'
     }
+
+
 }
 
-setInterval(nextBanner, 1000)
+setInterval(nextBanner, 2500)

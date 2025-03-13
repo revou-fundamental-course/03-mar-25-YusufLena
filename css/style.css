@@ -1,10 +1,21 @@
 /* ini file css */
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap");
+
+:root{
+    --sectionPadding: 6rem 0;
+}
+
+
+body{
+    font-family: "Noto Sans JP", sans-serif;
+    font-optical-sizing: auto;
+}
 
 .main-header{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border: 2px solid black;
+    /* border: 2px solid black; */
     padding: 8px;
 }
 
@@ -25,15 +36,105 @@ nav{
 }
 
 nav > a {
-    border: 1px solid;
+    /* border: 1px solid; */
     padding: 8px;
     text-decoration: none;
     color: black;
     border-radius: 2px;
+    margin-left: 8px ;
+}
+h1,
+h2,
+h3{
+    margin-left: 30px;
 }
 
-header > h1, p {
-    margin-left: 90px;
+p{
+    margin-left: -10px
+}
+
+.welcome{
+    margin-left: 30px;
+}
+
+.my-profile-content{
+    /* border: 2px solid black;
+    height: 500px; */
+    margin-left: 8px;
+}
+
+/* Skills and Education */
+#skills {
+    padding: var(--sectionPadding);
+    background: var(--secondaryBackgroundColor);
+}
+
+.skills-grid {
+    display: grid;
+    /* grid-template-columns: 40% 60%; */
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 3rem;
+}
+.education {
+    display: flex;
+    gap: 1rem;
+}
+
+.education .line {
+    padding: 0 0.7rem;
+}
+
+.education .line div {
+    width: 2px;
+    height: 100%;
+    background: var(--borderColor);
+    position: relative;
+}
+
+.education-info p {
+    margin: 0.6rem 0 1.4rem;
+}
+
+.education-years {
+    margin-bottom: 3rem;
+}
+
+  /* The dot on the line */
+.education .line div:before {
+    content: "";
+    width: 15px;
+    height: 15px;
+    background: var(--borderColor);
+    border-radius: 50%;
+    position: absolute;
+    left: -6px;
+}
+
+  /* Right side of Skills */
+.skills-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 1.5rem;
+}
+
+.skills-right ul {
+    line-height: 2rem;
+    padding: 0 1rem;
+}
+
+
+footer{
+    text-align: right;
+    margin: 30px;
+}
+
+/*  message us style */
+
+.contact-me-content{
+    /* border: 2px solid black;
+    height: 500px; */
+    display: flex;
+    justify-content: space-around;
 }
 
 textarea {
@@ -86,28 +187,6 @@ input[type="submit"]{
     margin-bottom: 20px;
 }
 
-/* .banner-img{
-    border: 2px solid black;
-    height: 500px;
-} */
-
-.our-profile-content{
-    border: 2px solid black;
-    height: 500px;
-}
-
-.achievement-content{
-    border: 2px solid black;
-    height: 500px;
-}
-
-.message-us-content{
-    /* border: 2px solid black;
-    height: 500px; */
-    display: flex;
-    justify-content: space-around;
-}
-
 .tampilan{
     border: 1px solid;
     width: 500px;
@@ -121,23 +200,16 @@ input[type="submit"]{
     align-items: center
 }
 
-footer{
-    text-align: right;
-    margin: 30px;
-}
-
+ /*  responsive page style */
 @media only screen and (max-width: 600px){
+
     main{
         flex-direction: column;
     }
     form{
         margin-bottom: 20px;
     }
-    header > h1{
-        margin: 0px;
-        text-align: center;
-    }
-    .message-us-content{
+    .contact-me-content{
         flex-direction: column;
     }
     .main-header{
@@ -154,7 +226,26 @@ footer{
         margin-bottom: 14px;
         margin-left: 0px;
     }
+    .banner-img{
+        width: 500px;
+        height: 100px;
+        margin-top: 15px;
+        margin-bottom: 15px;
+        margin-right: 5px;
+    }
+
+    .skills-grid {
+        gap: 1rem;
+    }
+
+    p{
+        margin: 0px;
+    }
+
 }
+
+
+/* banner img style */
 
 .banner-img{
     height: 500px;
@@ -162,16 +253,20 @@ footer{
     margin: 5px; */
     background-position: center;
     background-size: cover;
+    
 }
 
 .banner-1 {
-    background-image: url(../assets/photo1.jpg);
+    background-image: url(../assets/Pict1.avif);
 }
 .banner-2 {
-    background-image: url(../assets/download.jpg);
+    background-image: url(../assets/Gambar2.avif);
 }
 .banner-3 {
-    background-image: url(../assets/pict.jpg);
+    background-image: url(../assets/Gambar3.avif);
+}
+.banner-4{
+    background-image: url(../assets/Gambar4.avif);
 }
 
 
