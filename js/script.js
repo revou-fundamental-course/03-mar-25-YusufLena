@@ -79,4 +79,4 @@ function  showBanner(){
     }
 }
 
-setInterval(nextBanner, 2500)
+setInterval(nextBanner, 1000)
